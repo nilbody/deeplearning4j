@@ -9,11 +9,11 @@ if [ ! -f Canova ]; then
 fi
 cd nd4j
 git pull
-mvn clean install -DskipTests -Dmaven.javadoc.skip=true
+mvn clean install -DskipTests -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Dsource.skip=true -DskipITs=true -X -T 1C
 cd ..
 cd Canova
 git pull
-mvn clean install -DskipTests -Dmaven.javadoc.skip=true
+mvn clean install -DskipTests -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Dsource.skip=true -DskipITs=true -X -T 1C
 cd ..
 cd deeplearning4j
-mvn clean install -DskipTests -Dmaven.javadoc.skip=true
+mvn clean install -DskipTests -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Dsource.skip=true -DskipITs=true -X -T 1C
